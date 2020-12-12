@@ -6,10 +6,11 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [
+    children: [ 
       {
         path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+          // chama a pagina clientes-list fora do tabs
+          loadChildren: () => import('../clientes-list/clientes-list.module').then(m => m.ClientesListPageModule)
       },
       {
         path: 'tab2',
@@ -21,14 +22,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: 'tabs',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'tabs',
     pathMatch: 'full'
   }
 ];
