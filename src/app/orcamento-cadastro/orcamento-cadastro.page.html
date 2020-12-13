@@ -34,6 +34,8 @@
       <ion-label position="stacked">Descrição:</ion-label>
       <ion-textarea [(ngModel)]="orcamento.descricao" placeholder="Descrição"></ion-textarea>
     </ion-item>
+ <br>
+    <ion-button color="success" (click)="adicionarProdutos()">Adicionar Produtos</ion-button> 
 
     <ion-fab vertical="bottom"  horizontal="end">
       <ion-fab-button (click)="salvar()">

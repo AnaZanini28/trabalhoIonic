@@ -51,9 +51,14 @@ export class OrcamentoCadastroPage implements OnInit {
     this.router.navigate(['']);
    }
 
-    
+  //auxiliar para mostrar os clientesno combo  
    listar(){
     this.listaClientes= this.clientesService.getClientes();
+  }
+
+  //redirecionar para pafina de adicionar os produtos
+  adicionarProdutos(orcamento: Orcamentos){ 
+    this.router.navigate(['/orcamento-produtos']);
   }
 
 }
