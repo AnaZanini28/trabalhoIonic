@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>Cadastro de Clientes</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,7 +10,6 @@
       <ion-input [(ngModel)]="cliente.codigo" type="number"></ion-input>
   </ion-item>
 
-  <ion-content>
     <ion-item>
         <ion-label><strong>Nome: </strong></ion-label>
         <ion-input [(ngModel)]="cliente.nome"></ion-input>
@@ -48,3 +47,5 @@
     <ion-icon name="checkmark" ></ion-icon> 
   </ion-fab-button> 
 </ion-fab> 
+
+</ion-content>

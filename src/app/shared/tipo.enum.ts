@@ -1,4 +1,5 @@
 export enum Tipo {
-    CACHORROQUENTE,
-    CHOCOLATE
+    P = "Produtos",
+    M = "Mão de Obra",
+    D = "M.O. e Produtos"
 }

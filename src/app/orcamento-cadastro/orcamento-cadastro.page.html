@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Cadastro de Orçamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+  <ion-item>
+    <ion-label><strong>Código: </strong></ion-label>
+      <ion-input [(ngModel)]="orcamento.codigo" type="number"></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label><strong>Cliente: </strong></ion-label>
+        <ion-input [(ngModel)]="orcamento.cliente"></ion-input>
+    </ion-item> 
+   
+    <ion-item>
+      <ion-label><strong>Tipo: </strong></ion-label>
+      <ion-select [(ngModel)]="orcamento.tipo" multiple="false">
+      <ion-select-option *ngFor="let tipo of tipos" [value]="tipo.valor">{{tipo.descricao}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label><strong>Valor: </strong></ion-label>
+        <ion-input [(ngModel)]="orcamento.valor" ></ion-input>
+    </ion-item> 
+ 
+    <ion-item>
+      <ion-label><strong>Descrição: </strong></ion-label>
+        <ion-input [(ngModel)]="orcamento.descricao"></ion-input>
+    </ion-item> 
+
+    <ion-fab vertical="bottom"  horizontal="end">
+      <ion-fab-button (click)="salvar()">
+        <ion-icon name="checkmark" ></ion-icon> 
+      </ion-fab-button> 
+    </ion-fab> 
+
+</ion-content>

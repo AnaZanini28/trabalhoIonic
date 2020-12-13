@@ -17,6 +17,18 @@ const routes: Routes = [
   {
     path: 'clientes-cadastro',
     loadChildren: () => import('./clientes-cadastro/clientes-cadastro.module').then( m => m.ClientesCadastroPageModule)
+  },
+  {
+    path: 'orcamento-lista',
+    loadChildren: () => import('./orcamento-lista/orcamento-lista.module').then( m => m.OrcamentoListaPageModule)
+  },
+  {
+    path: 'orcamento-cadastro/:codigo',
+    loadChildren: () => import('./orcamento-cadastro/orcamento-cadastro.module').then( m => m.OrcamentoCadastroPageModule)
+  },
+  {
+    path: 'orcamento-cadastro',
+    loadChildren: () => import('./orcamento-cadastro/orcamento-cadastro.module').then( m => m.OrcamentoCadastroPageModule)
   }
 ];
 @NgModule({

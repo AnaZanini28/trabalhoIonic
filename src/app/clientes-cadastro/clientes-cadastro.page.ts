@@ -44,8 +44,7 @@ export class ClientesCadastroPage implements OnInit {
 
   //função salvar e voltar para lista de clientes
   salvar(){
-    this.clienteSevice.salvar(this.cliente);
-    console.log(this.cliente);  
+    this.clienteSevice.salvar(this.cliente); 
     this.router.navigate(['']);
    }
 
