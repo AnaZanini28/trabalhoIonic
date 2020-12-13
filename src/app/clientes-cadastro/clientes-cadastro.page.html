@@ -6,39 +6,39 @@
 
 <ion-content>
   <ion-item>
-      <ion-label><strong>Código: </strong></ion-label>
+      <ion-label position="stacked"><strong>Código: </strong></ion-label>
       <ion-input [(ngModel)]="cliente.codigo" type="number"></ion-input>
   </ion-item>
 
     <ion-item>
-        <ion-label><strong>Nome: </strong></ion-label>
+        <ion-label position="stacked"><strong>Nome: </strong></ion-label>
         <ion-input [(ngModel)]="cliente.nome"></ion-input>
     </ion-item>
 
   <ion-item>
-    <ion-label><strong>CPF: </strong></ion-label>
+    <ion-label position="stacked"><strong>CPF: </strong></ion-label>
     <ion-input [(ngModel)]="cliente.cpf"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label><strong>Sexo: </strong></ion-label>
+    <ion-label position="stacked"><strong>Sexo: </strong></ion-label>
     <ion-select [(ngModel)]="cliente.sexo" multiple="false">
     <ion-select-option *ngFor="let sexo of sexos" [value]="sexo.valor">{{sexo.descricao}}</ion-select-option>
     </ion-select>
 </ion-item>
 
 <ion-item>
-    <ion-label><strong>Data de Nascimento: </strong></ion-label>
+    <ion-label position="stacked"><strong>Data de Nascimento: </strong></ion-label>
     <ion-datetime [(ngModel)]="cliente.nascimento" displayFormat="DD/MM/YYYY" cancelText="Cancelar" doneText="Selecionar"></ion-datetime>
 </ion-item>
 
 <ion-item>
-  <ion-label><strong>Telefone: </strong></ion-label>
+  <ion-label position="stacked"><strong>Telefone: </strong></ion-label>
   <ion-input [(ngModel)]="cliente.telefone"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label><strong>Foto: </strong></ion-label>
+    <ion-label position="stacked"><strong>Foto: </strong></ion-label>
     <ion-input [(ngModel)]="cliente.foto"></ion-input>
 </ion-item>
 

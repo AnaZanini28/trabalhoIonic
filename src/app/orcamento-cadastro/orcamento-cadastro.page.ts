@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ClienteService } from '../shared/cliente.service';
+import { Clientes } from '../shared/clientes';
 import { OrcamentoService } from '../shared/orcamento.service';
 import { Orcamentos } from '../shared/orcamentos';
 import { Tipo } from '../shared/tipo.enum';
@@ -13,12 +15,16 @@ export class OrcamentoCadastroPage implements OnInit {
 
   orcamento: Orcamentos;
   
+  //cria a lista de clientes
+  listaClientes: Clientes[];
+
   //enum tipo
   tipos = Object.keys(Tipo).map((key) => ({valor: key, descricao: Tipo[key]}))
-
+ 
   constructor(
     private orcamentoSevice : OrcamentoService,
-    private router: Router,
+    private router: Router, 
+    private clientesService: ClienteService,
     private activatedRoute: ActivatedRoute) { 
       
     this.orcamento = new Orcamentos();
@@ -33,12 +39,21 @@ export class OrcamentoCadastroPage implements OnInit {
   } 
 
   ngOnInit() {
-  } 
+  
+    //ao iniciar chama a funcao de listagem de clientes
+    this.listar();
+  }
+
   
   //função salvar e voltar para lista de orcamento
   salvar(){  
     this.orcamentoSevice.salvar(this.orcamento); 
     this.router.navigate(['']);
    }
-   
+
+    
+   listar(){
+    this.listaClientes= this.clientesService.getClientes();
+  }
+
 }
