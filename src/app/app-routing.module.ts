@@ -29,14 +29,6 @@ const routes: Routes = [
   {
     path: 'orcamento-cadastro',
     loadChildren: () => import('./orcamento-cadastro/orcamento-cadastro.module').then( m => m.OrcamentoCadastroPageModule)
-  },
-  {
-    path: 'orcamento-produtos',
-    loadChildren: () => import('./orcamento-produtos/orcamento-produtos.module').then( m => m.OrcamentoProdutosPageModule)
-  },
-  {
-    path: 'orcamento-produtos/:codigo',
-    loadChildren: () => import('./orcamento-produtos/orcamento-produtos.module').then( m => m.OrcamentoProdutosPageModule)
   }
 ];
 @NgModule({
